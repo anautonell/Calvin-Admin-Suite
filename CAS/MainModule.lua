@@ -54,11 +54,11 @@ game.Players.PlayerAdded:Connect(function(plr)
 	local key = plr.UserId
 	local getData = bansDs:GetAsync(key)
 	if getData or api:isBanned(plr.Name) then
-		plr:Kick("You have been banned from this game using Calvin Admin Suite")
+		plr:Kick("Sorry! You have been banned from this game using Roadmin Admin Suite")
 	end
 	
 	if sLock.Value == true then
-		plr:Kick("Server is locked") 
+		plr:Kick("Error joining game. Server is locked. Error: SERVER_SLOCKED") 
 	end
 	
 	if values:FindFirstChild(plr.Name) then
@@ -73,7 +73,7 @@ game.Players.PlayerAdded:Connect(function(plr)
 	
 	wait(2.5)
 	if api:isGroupBanned(plr) then
-		plr:Kick("You are in a banned group")
+		plr:Kick("Oops, You are in a banned group. Please leave the banned group or contact a game admin.")
 	end	
 	
 	plr.Chatted:Connect(function(msg)
@@ -81,7 +81,7 @@ game.Players.PlayerAdded:Connect(function(plr)
 		table.insert(chatLogs, {User = plr.Name, Message = msg})
 		
 		if maintVal == true then 
-			errEvent:FireClient(plr, "DisplayMsg", "Calvin Admin Suite is currently under maintenance, please try again later") 
+			errEvent:FireClient(plr, "DisplayMsg", "Whoops, RoAdmin Admin Suite is currently under maintenance, please try again later") 
 			return 
 		end 		
 		
@@ -137,14 +137,14 @@ event.Event:Connect(function(action, Data)
 		local key = game.Players:GetUserIdFromNameAsync(Data.Target)
 		bansDs:SetAsync(key, 1)
 		if bannedPlr then
-			bannedPlr:Kick("You have been banned from this game using Calvin Admin Suite")
+			bannedPlr:Kick("Sorry! You have been banned from this game using RoAdmin Admin Suite")
 		end
 	elseif action == "BanPlayerFromUserID" then
 		local plrName = game.Players:GetNameFromUserIdAsync(Data.Target)
 		local bannedPlr = game.Players:FindFirstChild(plrName)
 		bansDs:SetAsync(Data.Target, 1)
 		if bannedPlr then
-			bannedPlr:Kick("You have been banned from this game using Calvin Admin Suite")
+			bannedPlr:Kick("Sorry! You have been banned from this game using RoAdmin Admin Suite")
 		end
 	end
 end)

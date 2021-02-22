@@ -180,7 +180,7 @@ adminAPI.commands = {
 		for _, plr in next, api:getPlayers(sender, target) do
 			if plr then
 				if plr ~= sender then
-					plr:Kick("You have been kicked from game server using Calvin Admin Suite")
+					plr:Kick("Oops, You have been kicked from game server using RoAdmin Admin Suite")
 				end
 			end
 		end
@@ -856,7 +856,7 @@ adminAPI.commands = {
 				model.Parent = workspace.Objects--]]
 			end
 		else
-			warn("unable to insert model because "..err)
+			warn("Unable to insert model because "..err)
 		end
 	end;
 	

@@ -15,3 +15,6 @@ allows for specifc administration as well, utilizing groups and group ranks for 
   
 I was going to make it so CAS would connect itself to Modulus and vice versa, but I never got around to doing it. That would unlock a wide variety of features and opportunities 
 that would enhance the user experience on both the bot and on the admin itself in-game.
+
+
+thank you for the real owner he's the best!
